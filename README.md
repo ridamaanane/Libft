@@ -1,3 +1,1 @@
-# libft_h
-
-asf;kl;
+rida is a coder

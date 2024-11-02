@@ -1,46 +1,59 @@
-#include <stdio.h>
+#include "libft.h"
 
-size_t atoi_len(int n)
+int len_itoa(int n)
 {
-    size_t len;
-	
+    int len;
+    long nb;  
+
     len = 0;
-    if (n == 0)
-        len++;
-    if (n < 0)
+    nb = n;    
+    if (nb == 0)
+        return (1);
+    if (nb < 0)
     {
         len++;
-        n = -n;
+        nb = -nb;
     }
-    while(n != 0)
+    while (nb > 0)
     {
-        n = n / 10;
+        nb = nb / 10;
         len++;
     }
     return (len);
 }
 
-int	main(void)
+void ft_nbplus(char *result, long nb, int len)
 {
-    printf("Test for 0: %zu\n", atoi_len(0));         // Should print 1
-    printf("Test for 5: %zu\n", atoi_len(5));         // Should print 1
-    printf("Test for 123: %zu\n", atoi_len(123));     // Should print 3
-    printf("Test for -5: %zu\n", atoi_len(-5));       // Should print 2
-    printf("Test for -123: %zu\n", atoi_len(-123));   // Should print 4
-    printf("Test for 2147483647: %zu\n", atoi_len(2147483647));     // Should print 10
-    printf("Test for -2147483648: %zu\n", atoi_len(-2147483648));   // Should print 11
-    return (0);
+    while (nb > 0)
+    {
+        len--;
+        result[len] = (nb % 10) + '0';
+        nb = nb / 10;
+    }
 }
 
-// char	*ft_itoa(int n)
-// {
-// 	char *buff;
-// 	size_t i;
-// 	len = atoi_len(n) + 1;
+char    *ft_itoa(int n)
+{
+    char *result;
+    int len;
+    long nb;  
 
-// 	buff = malloc(sizeof(char) * len);
-// 	if (!buff)
-// 		return (NULL);
-	
-// 	while 
-// }
+    nb = n;  
+    len = len_itoa(n);
+    result = malloc(sizeof(char) * (len + 1));
+    if (!result)
+        return (NULL);
+    result[len] = '\0';
+    if (nb == 0)
+    {
+        result[0] = '0';
+        return (result);
+    }
+    if (nb < 0)
+    {
+        result[0] = '-';
+        nb = -nb;
+    }
+    ft_nbplus(result , nb , len);
+    return (result);
+}

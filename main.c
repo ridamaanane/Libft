@@ -1,15 +1,23 @@
-// #include "libft.h"
+#include "libft.h"
+#include <stdio.h>
 
-// int main(void)
-// {
-//     int test_numbers[] = {0, 42, -42, 2147483647, -2147483648};
-//     int num_tests = sizeof(test_numbers) / sizeof(test_numbers[0]);
+char my_func(unsigned int i, char str)
+{
+    printf("My inner function: index = %d and %c\n", i, str);
+    if (str >= 'a' && str <= 'z')
+        return (str - 32);
+    return str;
+}
 
-//     for (int i = 0; i < num_tests; i++) {
-//         char *result = ft_itoa(test_numbers[i]);
-//         printf("Number: %d, String: %s\n", test_numbers[i], result);
-//         free(result);
-//     }
-
-//     return 0;
-// }
+int main()
+{
+    char str[10] = "hello.";
+    printf("The original string is: %s\n", str);
+    
+    char *result = ft_strmapi(str, my_func);
+    printf("The result is: %s\n", result);
+    
+    free(result);
+    
+    return 0;
+}

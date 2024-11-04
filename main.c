@@ -1,21 +1,26 @@
 #include "libft.h"
 
-char my_func(unsigned int i, char str)
-{
-    printf("My inner function: index = %d and %c\n", i, str);
-    if (str >= 'a' && str <= 'z')
-        return (str - 32);
-    return str;
-}
-
 int main()
 {
+    int fd = open("file.txt",O_WRONLY | O_CREAT | O_TRUNC , 0644);
 
-    char str[] = "Hello.123!1321556hhh0      wtwet zzt ";
-    printf("\nTest 2:\nOriginal string: %s\n", str);
-    char *result = ft_strmapi(str, my_func);
-    printf("Transformed string: %s\n", result);
-    free(result);
+    if (fd == -1)
+    {
+        write (2, "error\n", 6);
+        return (1);
+    }
 
-    return 0;
+    ft_putnbr_fd(-2147483648 , fd);
+    ft_putchar_fd('\n', fd);
+    ft_putnbr_fd(1337 , fd);
+    ft_putchar_fd('\n', fd);
+    ft_putnbr_fd(-1337 , fd);
+    ft_putchar_fd('\n', fd);
+    ft_putnbr_fd(-0 , fd);
+    ft_putchar_fd('\n', fd);
+    ft_putnbr_fd(0 , fd);
+
+    close(fd);
+
+    return (0);
 }

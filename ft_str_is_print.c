@@ -6,22 +6,24 @@
 /*   By: rmaanane <rmaanane@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 00:54:15 by rmaanane          #+#    #+#             */
-/*   Updated: 2024/10/22 00:54:15 by rmaanane         ###   ########.fr       */
+/*   Updated: 2024/11/05 03:24:39 by rmaanane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_str_is_print(char *str)
+int	ft_str_is_print(char *str)
 {
-    int i = 0;
-    while (str[i] != '\0')
-    {
-        if (str[i] >= 32 && str[i] <= 126)
-            i++;
-        else
-            return (0);
-        i++;
-    }
-    return (1);
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		if (str[i] >= 32 && str[i] <= 126)
+			i++;
+		else
+			return (0);
+		i++;
+	}
+	return (1);
 }

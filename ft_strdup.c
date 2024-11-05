@@ -14,24 +14,24 @@
 
 char	*ft_strdup(char *src)
 {
-    int size_src = ft_strlen(src);
+	int		size_src;
+	char	*dest;
+	int		i;
 
-    if (size_src == 0)
-        return (NULL);
-    
-    char *dest = malloc (sizeof(char) * size_src + 1);
-
-    if (dest == NULL)
-    {
-        return (NULL);
-    }
-
-    int i = 0;
-    while (src[i])
-    {
-        dest[i] = src[i];
-        i++;
-    }
-    dest[i] = '\0';
-    return (dest);
+	size_src = ft_strlen(src);
+	if (size_src == 0)
+		return (NULL);
+	dest = malloc(sizeof(char) * size_src + 1);
+	if (dest == NULL)
+	{
+		return (NULL);
+	}
+	i = 0;
+	while (src[i])
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0';
+	return (dest);
 }

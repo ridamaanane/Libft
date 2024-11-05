@@ -1,29 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_digit.c                                  :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rmaanane <rmaanane@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/22 00:54:02 by rmaanane          #+#    #+#             */
-/*   Updated: 2024/11/05 03:23:54 by rmaanane         ###   ########.fr       */
+/*   Created: 2024/10/22 00:53:55 by rmaanane          #+#    #+#             */
+/*   Updated: 2024/11/05 06:09:28 by rmaanane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_str_is_digit(char *str)
+int	ft_isascii(int c)
 {
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		if (str[i] >= 48 && str[i] <= 57)
-			i++;
-		else
-			return (0);
-		i++;
-	}
-	return (1);
+	if (c >= 0 && c <= 127)
+		return (1);
+	else
+		return (0);
 }

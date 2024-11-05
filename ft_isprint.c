@@ -1,28 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_ascii.c                                  :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rmaanane <rmaanane@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/22 00:53:55 by rmaanane          #+#    #+#             */
-/*   Updated: 2024/11/05 03:23:35 by rmaanane         ###   ########.fr       */
+/*   Created: 2024/10/22 00:54:15 by rmaanane          #+#    #+#             */
+/*   Updated: 2024/11/05 05:35:17 by rmaanane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_str_is_ascii(char *str)
+int	ft_isprint(int c)
 {
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		if (str[i] >= 0 && str[i] <= 126)
-			i++;
-		else
-			return (0);
-	}
-	return (1);
+	if (c >= 32 && c <= 126)
+		return (1);
+	else
+		return (0);
 }

@@ -6,11 +6,11 @@
 /*   By: rmaanane <rmaanane@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 03:56:28 by rmaanane          #+#    #+#             */
-/*   Updated: 2024/11/05 04:07:56 by rmaanane         ###   ########.fr       */
+/*   Updated: 2024/11/05 07:47:32 by rmaanane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
 	int	i;
 	int	result;
@@ -25,7 +25,7 @@ int ft_atoi(const char *str)
 	{
 		if (str[i] == '-')
 			sign = -sign;
-        i++;
+		i++;
 	}
 	while (str[i] >= '0' && str[i] <= '9')
 	{
@@ -34,3 +34,4 @@ int ft_atoi(const char *str)
 	}
 	return (sign * result);
 }
+

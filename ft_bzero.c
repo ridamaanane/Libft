@@ -1,29 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_print.c                                  :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rmaanane <rmaanane@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/22 00:54:15 by rmaanane          #+#    #+#             */
-/*   Updated: 2024/11/05 03:24:39 by rmaanane         ###   ########.fr       */
+/*   Created: 2024/11/05 05:50:26 by rmaanane          #+#    #+#             */
+/*   Updated: 2024/11/05 07:47:23 by rmaanane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_str_is_print(char *str)
+void    ft_bzero(void *s, size_t n)
 {
-	int	i;
+    char    *str;
+    size_t  i;
 
-	i = 0;
-	while (str[i] != '\0')
-	{
-		if (str[i] >= 32 && str[i] <= 126)
-			i++;
-		else
-			return (0);
-		i++;
-	}
-	return (1);
+    str = s;
+    i = 0;
+    while (i < n)
+    {
+        str[i] = 0;
+        i++;
+    }
 }
+
+// int main()
+// {
+//     char s[10] = "rida";
+    
+//     printf("before: %s\n", s);
+//     ft_bzero(s, 2);
+
+//     for (int i = 0; i < 4; i++)
+//         printf("after %d %c\n", s[i] ,s[i]);
+//     printf("\n");
+
+//     return (0);
+// }

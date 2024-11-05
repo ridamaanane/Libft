@@ -6,24 +6,16 @@
 /*   By: rmaanane <rmaanane@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 00:53:47 by rmaanane          #+#    #+#             */
-/*   Updated: 2024/11/05 04:12:34 by rmaanane         ###   ########.fr       */
+/*   Updated: 2024/11/05 06:13:00 by rmaanane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(char *str)
+int ft_isalpha(int c)
 {
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		if (str[i] >= 65 && str[i] <= 90)
-			i++;
-		else
-			return (0);
-		i++;
-	}
-	return (1);
+    if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
+        return (1);
+    else
+        return (0);
 }

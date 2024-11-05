@@ -6,13 +6,13 @@
 /*   By: rmaanane <rmaanane@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 00:53:06 by rmaanane          #+#    #+#             */
-/*   Updated: 2024/11/05 03:21:17 by rmaanane         ###   ########.fr       */
+/*   Updated: 2024/11/05 05:45:33 by rmaanane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *destination, const void *source, size_t n)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	char		*dest;
 	const char	*src;

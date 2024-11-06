@@ -12,24 +12,24 @@
 
 #include "libft.h"
 
-void    ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-    char    *str;
-    size_t  i;
+	char	*str;
+	size_t	i;
 
-    str = s;
-    i = 0;
-    while (i < n)
-    {
-        str[i] = 0;
-        i++;
-    }
+	str = s;
+	i = 0;
+	while (i < n)
+	{
+		str[i] = 0;
+		i++;
+	}
 }
 
 // int main()
 // {
 //     char s[10] = "rida";
-    
+
 //     printf("before: %s\n", s);
 //     ft_bzero(s, 2);
 

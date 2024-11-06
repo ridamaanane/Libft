@@ -6,7 +6,7 @@
 /*   By: rmaanane <rmaanane@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 03:07:54 by rmaanane          #+#    #+#             */
-/*   Updated: 2024/11/05 05:42:30 by rmaanane         ###   ########.fr       */
+/*   Updated: 2024/11/06 03:36:55 by rmaanane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,11 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	i = 0;
 	if (ft_strlen(s2) == 0)
 		return (s1);
-	while (s1[i] != '\0' && i < n)
+	while (s1[i] != '\0' && i < len)
 	{
 		backup = i;
 		j = 0;
-		while (s2[j] == s1[backup] && s2[j] != '\0' && backup < n)
+		while (s2[j] == s1[backup] && s2[j] != '\0' && backup < len)
 		{
 			j++;
 			backup++;

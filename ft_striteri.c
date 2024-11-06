@@ -6,7 +6,7 @@
 /*   By: rmaanane <rmaanane@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 03:07:25 by rmaanane          #+#    #+#             */
-/*   Updated: 2024/11/05 03:25:14 by rmaanane         ###   ########.fr       */
+/*   Updated: 2024/11/06 03:09:26 by rmaanane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
 	unsigned int	i;
 
+	if (!s || !f)
+        return;
 	i = 0;
 	while (s[i])
 	{

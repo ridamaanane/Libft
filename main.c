@@ -1,9 +1,16 @@
 #include "libft.h"
 
-int	main(void)
-{
-	printf("%d\n", ft_atoi("        12\n3456789kgdhq"));
-	printf("%d\n", ft_atoi("        -1234-567894ahq"));
-	printf("%d\n", ft_atoi("        -123\t456789kgds1234ahq"));
-	return (0);
+int main() {
+    const char *str = "Hello, world!";
+    int c = '\0';
+    char *result;
+
+    result = ft_strrchr(str, c);
+    if (result) {
+        printf("Found '%c' at position: %ld\n", c, result - str);
+    } else {
+        printf("Character '%c' not found.\n", c);
+    }
+
+    return 0;
 }

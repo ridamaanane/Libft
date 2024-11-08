@@ -1,20 +1,16 @@
 #include "libft.h"
 
-int	main(void)
+int main(void)
 {
-	const char	*str = "Hello, world!";
-	int			c;
-	char		*result;
-
-	c = '\0';
-	result = ft_strrchr(str, c);
-	if (result)
-	{
-		printf("Found '%c' at position: %ld\n", c, result - str);
-	}
-	else
-	{
-		printf("Character '%c' not found.\n", c);
-	}
-	return (0);
+    t_list *list = NULL;
+    t_list *first = malloc(sizeof(t_list));
+    
+    first->content = "123";
+    first->next = NULL;
+    
+    ft_lstadd_front(&list, first);
+    printf("%s\n", (char *)list->content);
+    
+    free(first);
+    return (0);
 }

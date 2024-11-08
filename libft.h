@@ -6,7 +6,7 @@
 /*   By: rmaanane <rmaanane@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 03:42:30 by rmaanane          #+#    #+#             */
-/*   Updated: 2024/11/05 05:55:18 by rmaanane         ###   ########.fr       */
+/*   Updated: 2024/11/07 22:01:29 by rmaanane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,12 @@
 # include <stdlib.h>
 # include <string.h>
 # include <unistd.h>
+
+typedef struct s_list
+{
+    void *content;
+    struct s_list *next;
+}   t_list;
 
 size_t	ft_strlen(const char *s);
 int		ft_isalpha(int c);
@@ -52,5 +58,8 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
+
+t_list *ft_lstnew(void *content);
+void ft_lstadd_front(t_list **lst, t_list *new);
 
 #endif

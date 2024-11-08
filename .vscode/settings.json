@@ -2,6 +2,9 @@
     "files.associations": {
         "libft.h": "c",
         "fcntl.h": "c",
-        "*.tcc": "c"
-    }
+        "*.tcc": "c",
+        "stdio.h": "c",
+        "ft_lstadd_front.C": "cpp"
+    },
+    "C_Cpp.errorSquiggles": "disabled"
 }

@@ -6,7 +6,7 @@
 /*   By: rmaanane <rmaanane@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 05:50:26 by rmaanane          #+#    #+#             */
-/*   Updated: 2024/11/05 07:47:23 by rmaanane         ###   ########.fr       */
+/*   Updated: 2024/11/08 23:43:05 by rmaanane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,14 +28,11 @@ void	ft_bzero(void *s, size_t n)
 
 // int main()
 // {
-//     char s[10] = "rida";
+//     char s[20] = "rida";
 
-//     printf("before: %s\n", s);
-//     ft_bzero(s, 2);
-
-//     for (int i = 0; i < 4; i++)
-//         printf("after %d %c\n", s[i] ,s[i]);
-//     printf("\n");
-
-//     return (0);
+//     ft_bzero(s , 4);
+//     for (int i = 0; i <= 4; i++)
+//     {
+//         printf("%d\n", s[i]);
+//     }
 // }

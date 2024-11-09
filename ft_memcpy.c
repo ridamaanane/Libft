@@ -6,7 +6,7 @@
 /*   By: rmaanane <rmaanane@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 00:53:06 by rmaanane          #+#    #+#             */
-/*   Updated: 2024/11/06 02:51:38 by rmaanane         ###   ########.fr       */
+/*   Updated: 2024/11/09 12:42:28 by rmaanane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 
 	dest = (unsigned char *)dst;
 	source = (const unsigned char *)src;
+	if (!dest && !src)
+		return (NULL);
 	i = 0;
 	while (i < n)
 	{

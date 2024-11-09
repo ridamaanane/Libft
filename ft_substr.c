@@ -6,7 +6,7 @@
 /*   By: rmaanane <rmaanane@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 03:08:11 by rmaanane          #+#    #+#             */
-/*   Updated: 2024/11/05 03:34:07 by rmaanane         ###   ########.fr       */
+/*   Updated: 2024/11/09 16:40:38 by rmaanane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 
 	if (!s)
 		return (0);
-	s_len = strlen(s);
+	s_len = ft_strlen(s);
 	if (s_len <= start)
-		return (strdup(""));
+		return (ft_strdup(""));
 	sub_len = s_len - start;
 	if (sub_len > len)
 		sub_len = len;

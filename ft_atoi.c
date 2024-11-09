@@ -6,7 +6,7 @@
 /*   By: rmaanane <rmaanane@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 03:56:28 by rmaanane          #+#    #+#             */
-/*   Updated: 2024/11/05 07:47:32 by rmaanane         ###   ########.fr       */
+/*   Updated: 2024/11/08 23:35:54 by rmaanane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,3 +34,9 @@ int	ft_atoi(const char *str)
 	}
 	return (sign * result);
 }
+
+// int main()
+// {
+//     printf("%d\n", ft_atoi("-465465456"));
+//     printf("%d\n", atoi("-465465456"));
+// }

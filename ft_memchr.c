@@ -6,7 +6,7 @@
 /*   By: rmaanane <rmaanane@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 03:06:09 by rmaanane          #+#    #+#             */
-/*   Updated: 2024/11/06 02:48:24 by rmaanane         ###   ########.fr       */
+/*   Updated: 2024/11/09 02:46:18 by rmaanane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,3 +29,12 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
+
+// int main()
+// {
+//     char s[20] = "rida";
+
+//     printf("%s", ft_memchr(s, 'a', 4));
+//     printf("\n");
+//     printf("%s", memchr(s, 'a', 4));
+// }

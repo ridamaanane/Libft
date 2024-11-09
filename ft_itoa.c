@@ -6,7 +6,7 @@
 /*   By: rmaanane <rmaanane@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 03:06:02 by rmaanane          #+#    #+#             */
-/*   Updated: 2024/11/05 03:17:11 by rmaanane         ###   ########.fr       */
+/*   Updated: 2024/11/09 02:10:20 by rmaanane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,3 +69,9 @@ char	*ft_itoa(int n)
 	ft_nbplus(result, nb, len);
 	return (result);
 }
+
+// int main()
+// {
+//     printf("%s", ft_itoa(+-65489446));
+//     return (0);
+// }

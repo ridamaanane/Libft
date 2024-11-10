@@ -6,7 +6,7 @@
 /*   By: rmaanane <rmaanane@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 00:54:24 by rmaanane          #+#    #+#             */
-/*   Updated: 2024/11/09 12:37:33 by rmaanane         ###   ########.fr       */
+/*   Updated: 2024/11/10 16:15:12 by rmaanane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,3 +31,13 @@ char	*ft_strdup(const char *s1)
 	dest[i] = '\0';
 	return (dest);
 }
+
+// int	main(void)
+// {
+// 	char *str = "\0";
+// 	char *ptr = ft_strdup(str);
+
+// 	printf ("%s", ptr);
+
+// 	free (ptr);
+// }

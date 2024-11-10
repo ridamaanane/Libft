@@ -6,7 +6,7 @@
 /*   By: rmaanane <rmaanane@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 00:54:32 by rmaanane          #+#    #+#             */
-/*   Updated: 2024/11/06 04:15:57 by rmaanane         ###   ########.fr       */
+/*   Updated: 2024/11/10 19:46:06 by rmaanane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,3 +34,10 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	dst[j] = '\0';
 	return (size_src + size_dest);
 }
+// int main(void)
+// {
+//     char    s1[] = "World!";
+//     char    s2[] = "Hello ";
+//     printf ("%zu |", ft_strlcat(s2, s1, 20));
+//     printf (" %s", s2);
+// }

@@ -1,4 +1,6 @@
-SRCS = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c \
+CC = gcc
+CFLAGS = -Wall -Wextra -Werror
+SRC = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c \
        ft_isprint.c ft_strlen.c ft_memset.c ft_bzero.c \
        ft_memcpy.c ft_strlcpy.c ft_strlcat.c \
        ft_calloc.c ft_strdup.c ft_toupper.c ft_tolower.c \
@@ -7,27 +9,25 @@ SRCS = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c \
        ft_strjoin.c ft_strtrim.c ft_split.c ft_itoa.c \
        ft_strmapi.c ft_striteri.c ft_putchar_fd.c \
        ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
-OBJS = ${SRCS:.c=.o}
-NAME = libft.a
-LIBC = ar rcs
-CC = cc
-RM = rm -f
-CFLAGS = -Wall -Wextra -Werror
 
-.c.o:
-	${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
 
-${NAME}: ${OBJS}
-	${LIBC} ${NAME} ${OBJS}
 
-all: ${NAME}
+OBJ = $(SRC:%.c=%.o)
+NAME = libft.a 
+
+all: $(NAME)
+$(NAME): $(OBJ)
+	@ar rsc $@ $?
+
+bonus: $(OBJ) $(OBJ_BNS)
+	@ar rsc $(NAME) $?
 
 clean:
-	${RM} ${OBJS}
+	@$(RM) *.o
 
 fclean: clean
-	${RM} ${NAME}
+	@$(RM) libft.a
 
-re: fclean all
+re: fclean $(NAME)
 
 .PHONY: all clean fclean re

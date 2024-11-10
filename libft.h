@@ -6,19 +6,19 @@
 /*   By: rmaanane <rmaanane@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 03:42:30 by rmaanane          #+#    #+#             */
-/*   Updated: 2024/11/09 16:41:13 by rmaanane         ###   ########.fr       */
+/*   Updated: 2024/11/10 21:52:33 by rmaanane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-//# include <fcntl.h>
-// # include <stdio.h>
+# include <fcntl.h>
+# include <limits.h>
+# include <stdio.h>
 # include <stdlib.h>
-// # include <string.h>
+# include <string.h>
 # include <unistd.h>
-// # include <limits.h>
 
 typedef struct s_list
 {

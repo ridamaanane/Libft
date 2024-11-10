@@ -6,13 +6,13 @@
 /*   By: rmaanane <rmaanane@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 03:06:02 by rmaanane          #+#    #+#             */
-/*   Updated: 2024/11/09 02:10:20 by rmaanane         ###   ########.fr       */
+/*   Updated: 2024/11/11 00:31:27 by rmaanane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	len_itoa(int n)
+static int	len_itoa(int n)
 {
 	int		len;
 	long	nb;
@@ -34,7 +34,7 @@ int	len_itoa(int n)
 	return (len);
 }
 
-void	ft_nbplus(char *result, long nb, int len)
+static void	ft_nbplus(char *result, long nb, int len)
 {
 	while (nb > 0)
 	{

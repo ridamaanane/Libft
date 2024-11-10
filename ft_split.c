@@ -6,17 +6,17 @@
 /*   By: rmaanane <rmaanane@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 03:06:56 by rmaanane          #+#    #+#             */
-/*   Updated: 2024/11/05 03:36:18 by rmaanane         ###   ########.fr       */
+/*   Updated: 2024/11/11 00:43:00 by rmaanane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_countwords(const char *str, char c)
+static int	ft_countwords(const char *str, char c)
 {
-	size_t	i;
-	size_t	word;
-	size_t	count;
+	int	i;
+	int	word;
+	int	count;
 
 	i = 0;
 	word = 0;
@@ -38,9 +38,9 @@ int	ft_countwords(const char *str, char c)
 	return (count);
 }
 
-int	ft_wordlen(const char *str, char c)
+static int	ft_wordlen(const char *str, char c)
 {
-	size_t	i;
+	int	i;
 
 	i = 0;
 	while (str[i] && str[i] != c)
@@ -48,9 +48,9 @@ int	ft_wordlen(const char *str, char c)
 	return (i);
 }
 
-char	*ft_wordcpy(char *dest, const char *src, size_t len)
+static char	*ft_wordcpy(char *dest, const char *src, int len)
 {
-	size_t	i;
+	int	i;
 
 	i = 0;
 	while (src[i] && i < len)
@@ -62,13 +62,21 @@ char	*ft_wordcpy(char *dest, const char *src, size_t len)
 	return (dest);
 }
 
+static void	ft_free(char **str, int i)
+{
+	while (i > 0)
+	{
+		free(str[i]);
+		i--;
+	}
+	free(str);
+}
+
 char	**ft_split(const char *s, char c)
 {
-	size_t	i;
-	size_t	size;
-	size_t	len_word;
 	char	**result;
 
+	int (i), (size), (len_word);
 	if (!s)
 		return (NULL);
 	size = ft_countwords(s, c);
@@ -83,10 +91,21 @@ char	**ft_split(const char *s, char c)
 		len_word = ft_wordlen(s, c);
 		result[i] = malloc(sizeof(char) * (len_word + 1));
 		if (!result[i])
-			return (NULL);
+			return (ft_free(result, i), NULL);
 		ft_wordcpy(result[i++], s, len_word);
 		s += len_word;
 	}
 	result[i] = NULL;
 	return (result);
 }
+
+// int main()
+// {
+//     char    *str = "hi rida labas";
+//     char **ptr = ft_split(str, ' ');
+//     for (int i = 0; i < ft_countwords(str, ' ') ; i ++)
+//     {
+//         printf("%s\n", ptr[i]);
+//     }
+//     free (ptr);
+// }

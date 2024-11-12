@@ -6,7 +6,7 @@
 /*   By: rmaanane <rmaanane@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 03:08:11 by rmaanane          #+#    #+#             */
-/*   Updated: 2024/11/09 16:40:38 by rmaanane         ###   ########.fr       */
+/*   Updated: 2024/11/12 18:32:42 by rmaanane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,3 +38,12 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 	substr[i] = '\0';
 	return (substr);
 }
+
+// int main()
+// {
+//     char *str = "hi rida cava 3leek!!";
+
+//     char *result = ft_substr(str, 3, 4);
+
+//     printf ("%s\n", result);
+// }

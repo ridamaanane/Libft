@@ -6,7 +6,7 @@
 /*   By: rmaanane <rmaanane@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 03:07:48 by rmaanane          #+#    #+#             */
-/*   Updated: 2024/11/10 19:40:29 by rmaanane         ###   ########.fr       */
+/*   Updated: 2024/11/13 04:14:49 by rmaanane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,22 +33,3 @@ char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 	result[i] = '\0';
 	return (result);
 }
-
-// char ft_uppx(unsigned int i, char c)
-// {
-//     (void)i;
-//     if (c >= 'a' && c <= 'z')
-//         return (c - 32);
-//     return (c);
-// }
-
-// int main()
-// {
-//     char *result;
-//     char str[] = "rida";
-
-//     result = ft_strmapi(str, ft_uppx);
-//     printf ("%s", result);
-
-//     free (result);
-// }

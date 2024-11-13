@@ -6,7 +6,7 @@
 /*   By: rmaanane <rmaanane@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 03:25:23 by rmaanane          #+#    #+#             */
-/*   Updated: 2024/11/10 18:23:13 by rmaanane         ###   ########.fr       */
+/*   Updated: 2024/11/13 04:00:32 by rmaanane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,14 +39,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	result[i] = '\0';
 	return (result);
 }
-
-// int main(void)
-// {
-//     char    *s1 = "Hello ";
-//     char    *s2 = "World!";
-//     char    *result;
-
-//     result = ft_strjoin(s1, s2);
-//     printf ("%s", result);
-//     free (result);
-// }

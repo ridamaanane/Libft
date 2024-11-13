@@ -6,7 +6,7 @@
 /*   By: rmaanane <rmaanane@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 03:08:05 by rmaanane          #+#    #+#             */
-/*   Updated: 2024/11/12 18:50:44 by rmaanane         ###   ########.fr       */
+/*   Updated: 2024/11/13 01:53:29 by rmaanane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,11 +40,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	str[i] = '\0';
 	return (str);
 }
-
-// int main()
-// {
-//     char str[100] = "ridaaaridaaahello rida 3leek ridaaa hahahhhh!!!! ridaaaridaaa";
-
-//     char *result = ft_strtrim(str , "ridaaa");
-//     printf("%s\n" , result);
-// }

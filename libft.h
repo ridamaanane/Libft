@@ -6,7 +6,7 @@
 /*   By: rmaanane <rmaanane@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 03:42:30 by rmaanane          #+#    #+#             */
-/*   Updated: 2024/11/13 01:29:24 by rmaanane         ###   ########.fr       */
+/*   Updated: 2024/11/13 02:07:00 by rmaanane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,10 @@
 
 # include <fcntl.h>
 # include <limits.h>
+# include <stdint.h>
 # include <stdio.h>
 # include <stdlib.h>
-#include <stdint.h>
+# include <string.h>
 # include <unistd.h>
 
 size_t	ft_strlen(const char *s);

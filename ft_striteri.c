@@ -6,7 +6,7 @@
 /*   By: rmaanane <rmaanane@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 03:07:25 by rmaanane          #+#    #+#             */
-/*   Updated: 2024/11/10 16:50:40 by rmaanane         ###   ########.fr       */
+/*   Updated: 2024/11/13 04:14:17 by rmaanane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,19 +25,3 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 		i++;
 	}
 }
-// void ft_upper(unsigned int i, char *str)
-// {
-// 	while (str[i] >= 'a' && str[i] <= 'z')
-// 	{
-// 		str[i] -= 32;
-// 		i++;
-// 	}
-// }
-
-// int	main(void)
-// {
-// 	char	s[] = "ana rida";
-
-// 	ft_striteri(s, ft_upper);
-// 	printf("%s", s);
-// }

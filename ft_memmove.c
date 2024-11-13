@@ -6,7 +6,7 @@
 /*   By: rmaanane <rmaanane@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 02:27:49 by rmaanane          #+#    #+#             */
-/*   Updated: 2024/11/12 02:56:12 by rmaanane         ###   ########.fr       */
+/*   Updated: 2024/11/13 04:07:25 by rmaanane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,13 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	char	*destination;
 	char	*source;
-	size_t	i;
 
 	destination = (char *)dst;
 	source = (char *)src;
+	if (destination == NULL && source == NULL)
+		return (NULL);
+	if (destination == source || len == 0)
+		return (dst);
 	if (destination > source)
 	{
 		while (len > 0)
@@ -30,12 +33,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	else if (destination < source)
 	{
-		i = 0;
-		while (i < len)
-		{
-			destination[i] = source[i];
-			i++;
-		}
+		ft_memcpy(dst, src, len);
 	}
 	return (dst);
 }

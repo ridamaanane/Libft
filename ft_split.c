@@ -6,7 +6,7 @@
 /*   By: rmaanane <rmaanane@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 03:06:56 by rmaanane          #+#    #+#             */
-/*   Updated: 2024/11/13 04:03:24 by rmaanane         ###   ########.fr       */
+/*   Updated: 2024/11/13 04:20:36 by rmaanane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,14 +98,3 @@ char	**ft_split(const char *s, char c)
 	result[i] = NULL;
 	return (result);
 }
-
-// int main()
-// {
-//     char    *str = "hi rida labas";
-//     char **ptr = ft_split(str, ' ');
-//     for (int i = 0; i < ft_countwords(str, ' ') ; i ++)
-//     {
-//         printf("%s\n", ptr[i]);
-//     }
-//     free (ptr);
-// }

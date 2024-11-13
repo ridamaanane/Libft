@@ -4,7 +4,8 @@
         "fcntl.h": "c",
         "*.tcc": "c",
         "stdio.h": "c",
-        "ft_lstadd_front.C": "cpp"
+        "ft_lstadd_front.C": "cpp",
+        "unistd.h": "c"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }

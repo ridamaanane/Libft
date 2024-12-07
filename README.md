@@ -1,4 +1,4 @@
-# LibFT Project Overview
+# Libft Project Overview
 
 ## Project Description
 Custom C standard library implementation providing essential string, memory, and type manipulation functions.

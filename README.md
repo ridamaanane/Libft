@@ -1,4 +1,4 @@
-# Libft Project Overview
+# Introducing My Exclusive C Library: Streamlined, Powerful, and Designed for Your Coding Excellence
 
 ## Project Description
 Custom C standard library implementation providing essential string, memory, and type manipulation functions.

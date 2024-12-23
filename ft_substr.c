@@ -29,7 +29,7 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 		sub_len = len;
 	substr = malloc(sizeof(char) * (sub_len + 1));
 	if (!substr)
-		return (substr);
+		return (NULL);
 	i = 0;
 	while (i < sub_len)
 	{
